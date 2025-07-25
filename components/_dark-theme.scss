@@ -1,0 +1,54 @@
+.theme__input {
+  display: none;
+}
+
+.cta {
+  position: relative;
+}
+
+.theme__label {
+  position: absolute;
+  margin-block-start: -3rem;
+  top: 0;
+  left: 0;
+  width: 4rem;
+  height: 2rem;
+  background-color: var(--theme-bg-color);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: var(--transform-time);
+}
+
+.theme__label::after {
+  content: "";
+  background-image: url(../images/contrast.png);
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-inline-start: 0.6rem;
+  transition: var(--transform-time);
+}
+
+.theme__input:checked + .theme__label {
+  background-color: var(--theme-bg-dark-color);
+}
+
+.theme__input:checked + .theme__label::after {
+  transform: translateX(1.6rem);
+  background-image: url(../images/moon.png);
+}
+
+html:has(.theme__input:checked) {
+  --page-background: var(--color-black);
+  --button-text-color: var(--color-black);
+  --link-hover-color: var(--color-white);
+}
+
+html:has(.theme__input:checked) .features__img,
+html:has(.theme__input:checked) .access__img {
+  opacity: 0.5;
+}

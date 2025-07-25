@@ -1,0 +1,44 @@
+@import "mixin";
+
+.footer {
+  width: 100%;
+  @include flex-layout($justify-content: space-between);
+}
+
+.footer__nav-list {
+  @include grid-layout($columns: 4, $justify-items: start, $c-gap: 3.3rem);
+}
+
+.footer__img-container {
+  grid-row: span 2;
+}
+
+.footer__logo {
+  max-width: 3rem;
+}
+
+.footer__nav-item:link,
+.footer__nav-item:visited {
+  text-decoration: none;
+  font-size: var(--font-size-12);
+  color: var(--text-color);
+  transition: var(--transform-time);
+}
+
+.footer__nav-item:hover,
+.footer__nav-item:active {
+  color: var(--link-hover-color);
+  text-decoration: underline;
+}
+
+.footer__sm {
+  @include flex-layout($gap: 1rem);
+}
+
+.footer__sm-icon {
+  transition: var(--transform-time);
+}
+
+.footer__sm-icon:hover {
+  transform: scale(1.08);
+}

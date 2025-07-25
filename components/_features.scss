@@ -1,0 +1,22 @@
+@import "mixin";
+
+.features {
+  @include grid-layout($r-gap: 5rem);
+  grid-template-columns: 1.3fr auto;
+}
+
+.features__header {
+  grid-column: 1/-1;
+}
+
+.features__list {
+  @include grid-layout($r-gap: 2rem, $justify-items: start);
+  text-align: start;
+  max-width: 45ch;
+  margin-inline-start: 5vw;
+}
+
+.features__img {
+  width: 55rem;
+  margin-inline-start: -30vw;
+}

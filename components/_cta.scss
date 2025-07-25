@@ -1,0 +1,11 @@
+@import "mixin";
+
+.cta__img {
+  max-width: 85px;
+  height: auto;
+}
+
+.cta__heading {
+  font-size: var(--font-size-30);
+  margin-block-start: 2.3rem;
+}

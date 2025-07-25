@@ -1,0 +1,5 @@
+@import "mixin";
+
+.sponsors__list {
+  @include flex-layout($gap: 8rem);
+}

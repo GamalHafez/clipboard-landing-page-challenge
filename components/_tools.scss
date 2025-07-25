@@ -1,0 +1,15 @@
+@import "mixin";
+
+.tools__list {
+  margin-block-start: 4rem;
+  @include grid-layout($columns: 3, $c-gap: 3.3rem, $align-items: start);
+}
+
+.tools__heading {
+  margin-block-end: 1.3rem;
+}
+
+.tools__img {
+  max-width: 38px;
+  margin-block-end: 2rem;
+}
